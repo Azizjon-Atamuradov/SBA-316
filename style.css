@@ -1,0 +1,10 @@
+header {
+    border: solid black;
+    text-align: center;
+   
+}
+#top-menu {
+    display: flex;
+    justify-content: space-evenly;
+ 
+} 
