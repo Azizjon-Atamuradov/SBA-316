@@ -35,3 +35,30 @@ nav a:hover {
 
 /* nav--------------------------------------------------------- */
 
+/* home -------------------------- */
+
+#home {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #2980b9;
+}
