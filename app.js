@@ -93,14 +93,26 @@ function displaySearchResults(recipes) {
     } else {
         recipes.forEach(recipe => { // loop through each recipe in the results
             const recipeItem = document.createElement('div');  //create a new div for recipe
-            recipeItem:classList.add('recipe-item'); // add class for styling
+            recipeItem.classList.add('recipe-item'); // add class for styling
             recipeItem.innerHTML = `
             <h2>${recipe.name}</h2> <!-- Recipe Name -->
             <img src ="${recipe.image}" alt="${recipe.name}" class="recipe-image"> <!--Recipe Image --> 
-            <p>${recipe.ingredients}<p/> <!-- Ingredients List -->`;
+            <p>${recipe.ingredients}</p> <!-- Ingredients List -->`;
 
             searchResults.appendChild(recipeItem); // add  recipe item to search results
             
         }) ;
     }
 }
+
+// function to filter recipes based on the search input 
+
+function filterRecipes (query) {
+    // filter predefined recipes based on whether the name includes the seaarch query
+    const filterRecipes = predifinedRecipes.filter( recipe => 
+        recipe.name.toLowerCase().includes(query.toLowerCase()) // case insensitive matching
+
+    );
+    displaySearchResults(filteredRecipes); // display the filtered results
+}
+
