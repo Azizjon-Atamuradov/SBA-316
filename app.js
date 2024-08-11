@@ -173,3 +173,10 @@ function navigate(page) {
 
 /// event listeners for navigation links
 
+document.getElementById('home-link').addEventListener('click', () => navigate('home'));  // navigate to home
+document.getElementById('recipes-link').addEventListener('click', () => navigate ('recipes'));   // navigate to recipes
+
+
+///// initialize the app by showing the home section first
+
+navigate('home');
