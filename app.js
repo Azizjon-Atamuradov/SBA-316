@@ -116,3 +116,10 @@ function filterRecipes (query) {
     displaySearchResults(filteredRecipes); // display the filtered results
 }
 
+/// add event listener to search button for triggering search
+searchButton.addEventListener ('click', function() {
+    filterRecipes(searchBar.value); //call filter function with the search bar value 
+});
+
+
+// 
