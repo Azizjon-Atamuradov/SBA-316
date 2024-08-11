@@ -122,4 +122,10 @@ searchButton.addEventListener ('click', function() {
 });
 
 
-// 
+//  add event listener to the search bar for pressing "enter " key
+
+searchBar.addEventListener ('keypress', function(event) {
+    if (event.key === 'Enter') {                //check if the key pressed is enter
+        filterRecipes(searchBar.value);            //call filter function with search bar value 
+    }
+}) ;
