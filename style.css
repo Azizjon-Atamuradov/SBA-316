@@ -92,3 +92,7 @@ nav a:hover {
 #btn-add:hover {
     background-color: #2980b9;
 }
+
+#recipes {
+    display: none;
+}
