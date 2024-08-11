@@ -33,7 +33,7 @@ const predefinedRecipes = [
     },
 
     {
-        name:"Shashlik (Grilled Skewers)",
+        name:"Shashlik ",
         ingredients: "marinade: 2 lb (beef,lamb or chicken), 2 large onions ,1/4 cup vegetable oil ,4-5 cloves of garlic ",
         image:"https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663717850_56-mykaleidoscope-ru-p-uzbekskii-shashlik-yeda-vkontakte-58.jpg"
     },

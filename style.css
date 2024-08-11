@@ -1,7 +1,7 @@
  body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
+    margin: 0em;
+    background-color:black;
     color: #333;
  }
 
@@ -152,5 +152,32 @@ nav a:hover {
 }
 
 /* /////            new */
+
+ .carousel  {
+    height: 700px;
+    width: 700px;
+  
+   
+   object-fit: cover;
+  
+
+ } 
+
+ header {
+    margin: 2em;
+ }
+ html body {
+    background-color:#FFE2B1; 
+}
+
+.caru {
+margin: 1em;
+display: flex;
+justify-content: center;
+}
+
+#uz {
+color: red;
+}
 
  
