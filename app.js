@@ -156,4 +156,20 @@ navigate ('recipes');   // navigate to recipes page to display updated list
 }
 
 
+// function to navigate between home and recipes pages
+
+function navigate(page) {
+    if (page === 'home') {            // if navigating to  home
+        document.getElementById('home').style.display = 'block';   // show the home section
+        document.getElementById('recipes').style.display = 'none';   // hide the recipes section 
+        searchResults.innerHTML = '';   // clear any search results
+    } else  {                   // if navigating to recipes
+        document.getElementById('home').style.display = 'none';   /// hide the home section
+        document.getElementById('recipes').style.display = 'block';  /// show the recipes section
+        displayRecipes(predefinedRecipes);   /// show all recipes on the recipes page
+
+    }
+}
+
+/// event listeners for navigation links
 
