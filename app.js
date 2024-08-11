@@ -129,3 +129,31 @@ searchBar.addEventListener ('keypress', function(event) {
         filterRecipes(searchBar.value);            //call filter function with search bar value 
     }
 }) ;
+
+/// add event listener to the form for submiting new recipes
+
+recipeForm.addEventListener('submit', addRecipe); /// call addrecipe func on form submission
+
+// function to handle adding a new recipe 
+
+function addRecipe(event) {
+    event.preventDefault();              //prevent the default from submission behavior
+    const name = document.getElementById('recipe-name').value.trim();  /// get the name from the input
+    const ingredients = document.getElementById('recipe-ingredients').value.trim(); // get ingredients from the input
+    const image = prompt ("Enter image URL for the recipe:");   // prompt use for an image url
+
+    // check if any fields are empty
+
+    if (!name || !ingredients || !image) {
+        alert('Please fill in all fields');      // alert user to fill in all fields
+        return;            // exit the function
+    }
+// add new recipe to the predifined recipes array
+predifinedRecipes.push({ name, ingredients, image });
+recipeForm.reset(); // clear the form inputs
+navigate ('recipes');   // navigate to recipes page to display updated list 
+
+}
+
+
+
