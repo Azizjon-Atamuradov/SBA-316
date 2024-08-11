@@ -111,3 +111,37 @@ nav a:hover {
     transition: transform 0.2s ease;
 
 }
+
+.recipe-item:hover {
+    transform: scale(1.05);      
+}
+
+/* styles for recipe images */
+
+.recipe-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    transition: transform 0.2s ease; 
+}
+
+/*  styles for recipe image om hover */
+
+.recipe-item:hover .recipe-image {
+    transform: scale(1.1);
+}
+
+
+/*  styles for recipe list container */
+
+#recipe-list  {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+
+
