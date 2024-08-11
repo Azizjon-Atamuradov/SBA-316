@@ -65,3 +65,42 @@ const predifinedRecipes = [
         image:"https://img.freepik.com/free-photo/dolma-stuffed-with-rice-meat_2829-18350.jpg?size=626&ext=jpg"
     },
 ]
+
+
+
+//  fucntion to display all recipes on recipe pages 
+
+function displayRecipes(recipes) {
+    recipeList.innerHtml = '';  // clear existing recipes in the list
+    recipes.forEach(recipe => {
+        const recipeItem = document.createElement('div');
+        recipeItem.classList.add('recipe-item');
+        recipeItem.innerHTML = `
+        <h2>${recipe.name}</h2> <!--Recipe Name -->
+        <img src= "${recipe.image}" alt= "${recipe.name}" class= "recipe-image"> <!--Recipe Image --> 
+        <p>${recipe.ingredients}</p> <!-- Ingredients List -->
+        `;
+        recipeList.appendChild(recipeItem);
+
+    });
+}
+// function to display search results based on user input
+
+function displaySearchResults(recipes) {
+    searchResults.innerHTML = ''; // clear previous search results
+    if (recipes.length === 0) { // check if there are no recipes found
+        searchResults.innerHTML = '<p>No recipe found.</p>'; // display message if no recipes match
+    } else {
+        recipes.forEach(recipe => { // loop through each recipe in the results
+            const recipeItem = document.createElement('div');  //create a new div for recipe
+            recipeItem:classList.add('recipe-item'); // add class for styling
+            recipeItem.innerHTML = `
+            <h2>${recipe.name}</h2> <!-- Recipe Name -->
+            <img src ="${recipe.image}" alt="${recipe.name}" class="recipe-image"> <!--Recipe Image --> 
+            <p>${recipe.ingredients}<p/> <!-- Ingredients List -->`;
+
+            searchResults.appendChild(recipeItem); // add  recipe item to search results
+            
+        }) ;
+    }
+}
